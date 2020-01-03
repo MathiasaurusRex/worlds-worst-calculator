@@ -11,8 +11,10 @@ function App() {
       <GridContainer gridType="grid-1">
         <h1>Worlds Worst Calculator</h1>
       </GridContainer>
+
       <Calculator />
-      <GridContainer gridType="grid-1">
+
+      <GridContainer gridType="grid-first-fixed">
         <h1>What are you going on about?</h1>
         <Accordion
           title={"Does 1 + 1 always equal 2?"}

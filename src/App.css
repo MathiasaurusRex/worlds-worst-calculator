@@ -17,3 +17,8 @@
 .grid-container .grid.grid-2 {
   grid-template-columns: 1fr 1fr;
 }
+/* An inner container that is two columns that are equal width */
+.grid-container .grid.grid-first-fixed {
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr repeat(3, 100px);
+}
