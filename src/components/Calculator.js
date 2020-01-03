@@ -5,7 +5,7 @@ import CalculatorResults from "./CalculatorResults";
 
 function Calculator(props) {
   return (
-    <GridContainer gridType="side-by-side">
+    <GridContainer gridType="grid-2">
       <CalculatorButtons />
       <CalculatorResults />
     </GridContainer>

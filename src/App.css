@@ -1,38 +1,19 @@
-.App {
-  text-align: center;
+.grid-container {
+  height: 100vh;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
+/* Making the grid equal the parent container which is 100 view height (100vh) */
+.grid-container .grid {
+  display: grid;
+  justify-items: center;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  height: 100%;
+  width: 100%;
 }
-
-.App-link {
-  color: #61dafb;
+/* An inner that is only 1 column */
+.grid-container .grid.grid-1 {
+  grid-template-columns: 1fr;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* An inner container that is two columns that are equal width */
+.grid-container .grid.grid-2 {
+  grid-template-columns: 1fr 1fr;
 }
