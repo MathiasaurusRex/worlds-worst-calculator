@@ -1,7 +1,36 @@
-.grid-container {
-  height: 100vh;
+@font-face {
+  font-family: "summer85regular";
+  src: url("summer85-webfont.woff2") format("woff2"),
+    url("summer85-webfont.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
 }
-/* Making the grid equal the parent container which is 100 view height (100vh) */
+
+h1 {
+  color: white;
+  z-index: 1000;
+  font-family: "summer85regular";
+  font-size: 6rem;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+h2 {
+  color: white;
+  z-index: 1000;
+  font-family: "summer85regular";
+  font-size: 3rem;
+  letter-spacing: 4px;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.grid-container {
+  height: 70vh;
+  position: relative;
+}
+/* Making the grid equal the parent .grid-container*/
 .grid-container .grid {
   display: grid;
   justify-items: center;
@@ -22,3 +51,75 @@
   grid-template-columns: 1fr;
   grid-template-rows: 1fr repeat(3, 100px);
 }
+
+.grid-container:nth-child(even) {
+  background-color: #f4ef21;
+}
+
+.grid-container:nth-child(odd) {
+  background: rgb(4, 1, 9);
+  background: linear-gradient(
+    0deg,
+    rgba(4, 1, 9, 1) 0%,
+    rgba(63, 3, 156, 1) 100%
+  );
+}
+
+.grid-container:nth-child(odd):before {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: linear-gradient(to bottom, transparent 95%, #df00ff 5%),
+    linear-gradient(to right, transparent 95%, #df00ff 5%);
+  background-size: 1px 100px, 100px 1px;
+  position: absolute;
+  opacity: 0.2;
+}
+.grid-container:nth-child(odd):after {
+  content: "";
+  display: block;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background-image: url(http://api.thumbr.it/whitenoise-361x370.png?background=000000ff&noise=ffffff&density=8&opacity=53);
+  background-size: cover;
+  background-repeat: repeat;
+  z-index: 1;
+  background-color: red;
+  position: absolute;
+  opacity: 0.4;
+}
+/* 
+.grid-container:nth-child(odd):after {
+  content: "";
+  display: block;
+  height: 100px;
+  bottom: 50px;
+  width: 110vw;
+  left: -5vw;
+  background-color: red;
+  border-radius: 50%;
+  z-index: 0;
+  position: relative;
+}
+
+.grid-container:nth-child(even):after {
+  content: "";
+  display: block;
+  height: 100px;
+  bottom: 50px;
+  width: 110vw;
+  left: -5vw;
+  background-color: blue;
+  border-radius: 50%;
+  z-index: 0;
+  position: relative;
+}
+
+.grid-container:last-of-type:after {
+  display: none;
+} */

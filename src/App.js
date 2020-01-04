@@ -9,13 +9,16 @@ function App() {
   return (
     <Fragment>
       <GridContainer gridType="grid-1">
-        <h1>Worlds Worst Calculator</h1>
+        <h1>
+          Worlds Worst
+          <br /> Calculator
+        </h1>
       </GridContainer>
 
       <Calculator />
 
       <GridContainer gridType="grid-first-fixed">
-        <h1>What are you going on about?</h1>
+        <h2>What are you going on about?</h2>
         <Accordion
           title={"Does 1 + 1 always equal 2?"}
           description={
