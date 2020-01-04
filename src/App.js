@@ -17,7 +17,7 @@ function App() {
 
       <Calculator />
 
-      <GridContainer gridType="grid-first-fixed">
+      {/* <GridContainer gridType="grid-first-fixed">
         <h2>What are you going on about?</h2>
         <Accordion
           title={"Does 1 + 1 always equal 2?"}
@@ -33,7 +33,7 @@ function App() {
           title={"What if it doesn't?"}
           description={"We probably should have written our unit tests better."}
         />
-      </GridContainer>
+      </GridContainer> */}
     </Fragment>
   );
 }

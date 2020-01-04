@@ -3,7 +3,7 @@ function CalculatorButtons(props) {
   return (
     <h1>
       <div>Equals</div>
-      <div>2</div>
+      <div>{props.countOne}</div>
     </h1>
   );
 }

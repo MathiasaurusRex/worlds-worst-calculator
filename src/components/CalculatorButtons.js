@@ -2,9 +2,13 @@ import React from "react";
 function CalculatorButtons(props) {
   return (
     <div className="calculator-buttons">
-      <button className="button">1</button>
-      <button className="button">+</button>
-      <button className="button">1</button>
+      <button className="button" onClick={props.addOne}>
+        {props.countOne}
+      </button>
+      <span class="h1 math-sign">+</span>
+      <button className="button" onClick={props.addTwo}>
+        {props.countTwo}
+      </button>
     </div>
   );
 }
