@@ -4,21 +4,18 @@ import CalculatorButtons from "./CalculatorButtons";
 import CalculatorResults from "./CalculatorResults";
 
 function Calculator(props) {
-  const [countFirstNumber, setCount] = useState(1);
-  const [countSecondNumber] = useState(2);
+  const [countFirstNumber, setFirstNumber] = useState(1);
+  const [countSecondNumber, setSecondNumber] = useState(2);
 
+  // How would I consolidate both of these functions
+  // into a single function that updates a variable state?
   const addOne = () => {
-    setCount(countFirstNumber + 1);
+    setFirstNumber(countFirstNumber + 1);
   };
   const addTwo = () => {
-    setCount(countSecondNumber + 2);
+    setSecondNumber(countSecondNumber + 2);
   };
 
-  const myHandleClick = React.createContext(() => addOne(1));
-
-  useEffect(() => {
-    document.title = `You clicked ${countFirstNumber} times`;
-  });
   return (
     <GridContainer gridType="grid-2">
       <CalculatorButtons
