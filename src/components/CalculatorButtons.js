@@ -5,7 +5,7 @@ function CalculatorButtons(props) {
       <button className="button" onClick={props.addOne}>
         {props.countOne}
       </button>
-      <span class="h1 math-sign">+</span>
+      <span className="h1 math-sign">+</span>
       <button className="button" onClick={props.addTwo}>
         {props.countTwo}
       </button>
