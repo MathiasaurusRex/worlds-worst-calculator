@@ -3,7 +3,7 @@ function CalculatorButtons(props) {
   return (
     <h1>
       <div>Equals</div>
-      <div>{props.countOne}</div>
+      <div data-testid='final-result'>{props.countOne}</div>
     </h1>
   );
 }
